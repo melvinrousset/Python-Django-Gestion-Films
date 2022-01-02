@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Liste-Film-MovieCiné{% endblock %}
+{% block content %}
+{% load static %}
+<h1>Liste<h1>
+
+<h2>Selection<h2>
+
+
+{%for movie in movie_list%}
+
+<div class ="movie-{{movie.title}}">
+
+
+
+<li>
+
+{{movie.title}}
+</li>
+<img src="/{{movie.image}}">
+<li>
+
+{{movie.description}}
+</li>
+
+<li>
+
+{{movie.price}}
+</li>
+
+
+
+
+<input type="button" onclick="window.location.href = '{{movie.get_absolute_url}}';" value="DETAILS"/>
+
+
+
+
+
+
+</div>
+
+{%endfor%}
+
+<form action="create/">
+<input type="submit", value="Ajouter Film">
+</form>
+
+
+
+{% endblock %}

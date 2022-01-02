@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Creer-MovieCiné{% endblock %}
+{% block content %}
+
+
+<h1> Creation de Film <h1>
+<form action = '.' method = 'post' enctype='multipart/form-data'> {%csrf_token%}
+{{form.as_p}}
+<input type ='submit' value ='Créer'>
+
+</form>
+{% endblock %}

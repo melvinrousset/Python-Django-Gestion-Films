@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Supprimer-MovieCiné{% endblock %}
+{% block content %}
+
+<h1>Vouler vous supprimer le Film {{object.title}}<h1>
+
+<form action="." method="POST">{%csrf_token%}
+<input type="submit", value="Oui"
+<a href="../">Annuler</a>
+</form>
+{% endblock %}

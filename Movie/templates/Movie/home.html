@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Accueil-MovieCiné{% endblock %}
+{% block content %}
+
+<h1>ACCUEIL<h1>
+
+<h2>Selection<h2>
+<form>
+    <input type="button" onclick="window.location.href = 'http://localhost:8000/Movie/Film';" value="Film"/>
+    <input type="button" onclick="window.location.href = 'http://localhost:8000/Movie/Serie';" value="Série"/>
+    <input type="button" onclick="window.location.href = 'http://localhost:8000/Movie/Jeux-Vidéo';" value="Jeux-Vidéo"/>
+         
+</form>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Details-MovieCiné{% endblock %}
+{% block content %}
+{% load static %}
+
+<h1>Details<h1>
+
+<h1>{{object.title}}</h1>
+</li>
+<img src="/{{object.image}}">
+<li>
+<li>
+Titre : {{object.title}}
+</li>
+<li>
+Description : {{object.description}}
+</li>
+<li>
+Prix : {{object.price}}
+</li>
+
+<form action = './update/'>
+<input type ="submit", value = "Actualiser">
+</form>
+
+<form action = 'delete/'>
+<input type ="submit", value = "supprimer">
+</form>
+
+
+
+
+
+
+{% endblock %}
